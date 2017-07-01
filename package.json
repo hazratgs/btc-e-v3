@@ -1,6 +1,6 @@
 {
-  "name": "btc-e",
-  "version": "1.0.0",
+  "name": "btc-e-v3",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
