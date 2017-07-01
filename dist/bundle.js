@@ -108,7 +108,7 @@ class btceService {
     if (!type) return Promise.reject('Missing type');
     if (!rate) return Promise.reject('Missing rate');
     if (!amount) return Promise.reject('Missing amount');
-    return this.makeTradeApiRequest({ method: 'ActiveOrders', pair });
+    return this.makeTradeApiRequest({ method: 'Trade', pair, type, rate, amount });
   }
 
   cancelOrder(order_id) {
