@@ -66,9 +66,9 @@ class btceService {
       });
   }
 
-  makePublicApiRequest({ pair, method }) {
+  makePublicApiRequest({ pair, method, limit = 150 }) {
     if(!method) return Promise.reject('Missing method');
-    const url = `${this.BTC_E_PUBLIC_API}${method}/${pair}`;
+    const url = `${this.BTC_E_PUBLIC_API}${method}/${pair}?limit=${limit}`;
     return axios.post(url)
       .then(({data}) => {
         const error = _.get(data, 'error', '');
@@ -125,7 +125,7 @@ class btceService {
     return this.makePublicApiRequest({method: 'ticker', pair: pair});
   }
 
-  trades(pair, limit = 150) {
+  trades(pair, limit) {
     if(!pair) return Promise.reject('Missing pair');
     return this.makePublicApiRequest({method: 'trades', pair: pair, limit: limit});
   }
