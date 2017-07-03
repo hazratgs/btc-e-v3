@@ -125,9 +125,9 @@ class btceService {
     return this.makePublicApiRequest({method: 'ticker', pair: pair});
   }
 
-  trades(pair) {
+  trades(pair, limit = 150) {
     if(!pair) return Promise.reject('Missing pair');
-    return this.makePublicApiRequest({method: 'trades', pair: pair});
+    return this.makePublicApiRequest({method: 'trades', pair: pair, limit: limit});
   }
 
   depth(pair) {
