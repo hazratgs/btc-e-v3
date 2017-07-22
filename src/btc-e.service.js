@@ -109,7 +109,7 @@ export default class btceService {
 
   cancelOrder(order_id) {
     if (!order_id) return Promise.reject('Missing order_id');
-    this.makeRequest({method: 'CancelOrder', params: { order_id }});
+    return this.makeTradeApiRequest({method: 'CancelOrder', order_id});
   }
 
   info() {
