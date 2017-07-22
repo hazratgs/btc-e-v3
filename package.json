@@ -2,7 +2,12 @@
   "name": "btc-e-v3",
   "version": "1.0.5",
   "main": "index.js",
+  "author": "hazratgs",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hazratgs/btc-e-v3"
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "crypto": "^0.0.3",
