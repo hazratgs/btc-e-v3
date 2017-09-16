@@ -9,8 +9,8 @@ var _ = _interopDefault(require('lodash'));
 
 class btceService {
   constructor({ publicKey, secretKey, nonce = 0 } = {}) {
-    this.BTC_E_TRADE_API = 'https://btc-e.nz/tapi/';
-    this.BTC_E_PUBLIC_API = 'https://btc-e.nz/api/3/';
+    this.BTC_E_TRADE_API = 'https://wex.nz/tapi/';
+    this.BTC_E_PUBLIC_API = 'https://wex.nz/api/3/';
     this.publicKey = publicKey;
     this.secretKey = secretKey;
     this.nonce = nonce;
